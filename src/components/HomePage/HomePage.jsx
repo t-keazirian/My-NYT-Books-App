@@ -39,7 +39,7 @@ function HomePage() {
 
 	return (
 		<>
-			<div className='text-center mb-4 font-bold text-xl'>
+			<div className='text-center font-bold text-xl m-4 p-3'>
 				Click a card for more info
 			</div>
 			<ul className='flex flex-wrap justify-center'>
@@ -55,24 +55,30 @@ function HomePage() {
 					}) => (
 						<li
 							key={primary_isbn10}
-							className='m-2 flex flex-col rounded-2xl shadow-md shadow-slate-700  p-2 md:max-w-56 max-w-80 list-none'
+							className='m-4 flex flex-col rounded-2xl shadow-md shadow-slate-700 p-2 md:max-w-64 max-w-80 list-none bg-powderBlue bg-opacity-20'
 						>
 							<Link to={`/book/${primary_isbn10}`}>
 								<img
 									key={primary_isbn10}
 									src={book_image}
-									className='rounded-lg w-full h-auto object-cover mb-2'
+									className='rounded-xl w-full h-auto object-cover mb-2 p-2'
 								/>
-								<div className='flex flex-col'>
-									<div className='font-bold text-xl text-center'>
+								<div>
+									<div className='font-extrabold text-xl text-center'>
 										{toProperCase(title)}
 									</div>
-									<div className='font-medium text-lg text-center'>
+									<div className='font-semibold text-lg text-center'>
 										{author}
 									</div>
-									<div>Rank: {rank}</div>
-									<div>Rank Last Week: {rank_last_week}</div>
-									<div>Weeks on List: {weeks_on_list}</div>
+									<div className='p-2'>
+										<p className='text-gray-600'>Rank: {rank}</p>
+										<p className='text-gray-600'>
+											Rank Last Week: {rank_last_week}
+										</p>
+										<p className='text-gray-600'>
+											Weeks on List: {weeks_on_list}
+										</p>
+									</div>
 								</div>
 							</Link>
 						</li>
