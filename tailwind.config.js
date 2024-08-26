@@ -6,6 +6,9 @@ export default {
 			fontFamily: {
 				appleChancery: ['"Apple Chancery"', 'cursive'],
 			},
+			maxWidth: {
+				'60p': '60%',
+			},
 			colors: {
 				sage: '#BFCC94',
 				babyPower: '#F0F4EF',

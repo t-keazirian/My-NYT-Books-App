@@ -34,19 +34,39 @@ function BookDetail() {
 	}, [isbn]);
 
 	if (!bookDetails) {
-		return <p>Loading book details...</p>;
+		return (
+			<p className='text-lg text-center bg-white p-6'>
+				Loading book details...
+			</p>
+		);
 	}
 
 	const { title, description, infoLink } = bookDetails;
 
 	return (
-		<>
-			<div>{title}</div>
-			<img key={isbn} src={bookDetails.imageLinks.smallThumbnail} />
-			<div>{bookDetails.authors[0]}</div>
-			<div>{description}</div>
-			<div>{infoLink}</div>
-		</>
+		<div className='flex p-6 w-fit justify-center'>
+			<div className='flex flex-col flex-wrap items-center shadow-md shadow-slate-500 rounded-2xl md:w-[50%]'>
+				<img
+					key={isbn}
+					src={bookDetails.imageLinks.smallThumbnail}
+					className='rounded-xl w-max h-auto object-cover m-2 p-2'
+				/>
+				<a
+					href={infoLink}
+					target='_blank'
+					rel='noopener noreferrer'
+					className='text-powderBlue font-extrabold text-3xl'
+				>
+					{title}
+				</a>
+				<div className='font-semibold text-richBlack'>
+					{bookDetails.authors[0]}
+				</div>
+				<div className='flex flex-col items-center text-center'>
+					<div className='p-8 text-richBlack'>{description}</div>
+				</div>
+			</div>
+		</div>
 	);
 }
 
