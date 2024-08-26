@@ -1,4 +1,4 @@
-const newYorkTimesAPIKey = '8RdgFQywhLsiS16Gv3WkZ49p69zylL8x';
-const googleBooksAPIKey = 'AIzaSyDGPzvtP7hjrrjPo11QM2HRMPboqJieGvI';
+const newYorkTimesAPIKey = import.meta.env.VITE_NYT_API_KEY;
+const googleBooksAPIKey = import.meta.env.VITE_GOOGLE_BOOKS_API_KEY;
 
 export { newYorkTimesAPIKey, googleBooksAPIKey };
