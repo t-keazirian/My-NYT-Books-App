@@ -34,12 +34,14 @@ function HomePage() {
 	}, []);
 
 	if (error) {
-		return <p>Error: {error}</p>;
+		return (
+			<div className='text-lg text-center bg-white p-6'>Error: {error}</div>
+		);
 	}
 
 	return (
 		<>
-			<div className='text-center font-bold text-xl m-4 p-3'>
+			<div className='text-center font-bold text-xl m-4 p-3 text-richBlack'>
 				Click a card for more info
 			</div>
 			<ul className='flex flex-wrap justify-center'>
@@ -55,7 +57,7 @@ function HomePage() {
 					}) => (
 						<li
 							key={primary_isbn10}
-							className='m-4 flex flex-col rounded-2xl shadow-md shadow-slate-700 p-2 md:max-w-64 max-w-80 list-none bg-powderBlue bg-opacity-20'
+							className='m-4 flex flex-col rounded-2xl shadow-md shadow-slate-700 p-2 md:max-w-64 max-w-80 list-none bg-powderBlue bg-opacity-20 transition-shadow duration-300 cursor-pointer hover:shadow-lg hover:shadow-indigo'
 						>
 							<Link to={`/book/${primary_isbn10}`}>
 								<img
@@ -64,10 +66,10 @@ function HomePage() {
 									className='rounded-xl w-full h-auto object-cover mb-2 p-2'
 								/>
 								<div>
-									<div className='font-extrabold text-xl text-center'>
+									<div className='font-extrabold text-xl text-center text-richBlack'>
 										{toProperCase(title)}
 									</div>
-									<div className='font-semibold text-lg text-center'>
+									<div className='font-semibold text-lg text-center px-2 py-1 text-richBlack'>
 										{author}
 									</div>
 									<div className='p-2'>
