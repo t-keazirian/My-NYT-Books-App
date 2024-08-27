@@ -63,7 +63,15 @@ git clone git@github.com:t-keazirian/My-NYT-Books-App.git
 npm install
 ```
 
-4. Place the API keys in the `.env` file, like below:
+4. For the sake of this coding challenge, I have created a `.env.example` file that you can easily copy and then paste my API keys to your convenience
+
+5. Copy the `.env.example file
+
+```shell
+cp .env.example .env
+```
+
+6. That will create the `.env` file, where you can paste in the provided API keys (see below)
 
 ```env
 VITE_NYT_API_KEY=your_nyt_api_key
