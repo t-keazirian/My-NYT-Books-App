@@ -4,7 +4,6 @@ import { Link, useParams } from 'react-router-dom';
 
 function BookDetail() {
 	const { isbn } = useParams();
-	console.log(isbn, 'isbn');
 	const [bookDetails, setBookDetails] = useState(null);
 
 	useEffect(() => {
@@ -21,7 +20,6 @@ function BookDetail() {
 				}
 
 				const data = await response.json();
-				console.log(data.items[0].volumeInfo, 'data');
 
 				if (data.items && data.items.length > 0) {
 					setBookDetails(data.items[0].volumeInfo);
