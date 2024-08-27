@@ -18,9 +18,14 @@ This project uses two APIs:
 1. [NYT Books API](https://developer.nytimes.com/docs/books-product/1/overview)
 2. [Google Books API](https://developers.google.com/books)
 
-![Homepage]('src/images/homepage.png')
 
-The first page pulls in the list of the current NYT best sellers. From there, you can click on one of the cards that correspond to each book, where you'll see more detailed information about the book you've chosen.
+The first page pulls in the list of the current NYT best sellers (see below).
+
+<img width="1202" alt="homepage" src="https://github.com/user-attachments/assets/7132bbc2-82af-45b3-ae99-a743408d0033">
+
+Once you have your list, you can click on an individual book "card", which will take you to a separate screen to see more details on the book you've chosen (see below).
+
+<img width="800" alt="individual-page" src="https://github.com/user-attachments/assets/aa2d372a-0527-4adf-a67f-723069ffb403">
 
 The list will change as the NYT Best Sellers list is updated, as this app always shows you the most current list.
 
