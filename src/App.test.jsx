@@ -1,7 +1,9 @@
-import { expect, test } from 'vitest';
+import { describe, expect, test } from 'vitest';
 import App from './App';
 
-test('App exists', () => {
-	const appComponent = <App />;
-	expect(appComponent).toBeTruthy;
+describe('App', () => {
+	test('App exists', () => {
+		const appComponent = <App />;
+		expect(appComponent).toBeTruthy;
+	});
 });

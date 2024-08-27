@@ -46,8 +46,8 @@ function BookDetail() {
 	return (
 		<>
 			<div className='bg-gradient-to-t from-babyPower to-white'>
-				<h1 className='text-richBlack font-extrabold text-4xl text-center bg-gradient-to-br from-sage to-white p-8 font-serif'>
-					📚 NYT Best Seller no. 📚
+				<h1 className='text-richBlack font-extrabold text-lg text-center bg-gradient-to-br from-sage to-white p-8 font-serif'>
+					📚 More info about {title} 📚
 				</h1>
 			</div>
 			<div className='flex p-6 w-fit justify-center'>
@@ -65,14 +65,21 @@ function BookDetail() {
 					>
 						{title}
 					</a>
-					<div className='font-semibold text-richBlack'>
+					<div className='font-semibold text-richBlack mt-3'>
 						{bookDetails.authors[0]}
 					</div>
 					<div className='flex flex-col items-center text-center'>
 						<div className='p-8 text-richBlack'>{description}</div>
 					</div>
 				</div>
-				<Link to={'/'}>go back</Link>
+			</div>
+			<div className='flex justify-center mt-4 mb-10'>
+				<Link
+					to='/'
+					className='px-4 py-2 bg-powderBlue text-richBlack font-semibold rounded-md hover:bg-indigo hover:text-babyPower transition-colors duration-200 '
+				>
+					Back Home
+				</Link>
 			</div>
 		</>
 	);
