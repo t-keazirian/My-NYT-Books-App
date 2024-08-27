@@ -7,8 +7,8 @@ This app allows you to see current NYT Best Sellers and some detailed informatio
 1. [Description](#description)
 2. [Getting Started](#getting-started)
 3. [Dependencies](#dependencies)
-4. [installing](#installing)
-5. [Executing Program](#executing-program)
+4. [Installing](#installing)
+5. [Running the Application](#running-the-application)
 6. [The Why](#the-why)
 
 ## Description
@@ -63,7 +63,16 @@ git clone git@github.com:t-keazirian/My-NYT-Books-App.git
 npm install
 ```
 
-### Executing program
+4. Place the API keys in the `.env` file, like below:
+
+```env
+VITE_NYT_API_KEY=your_nyt_api_key
+VITE_GOOGLE_BOOKS_API_KEY=your_google_books_api_key
+```
+
+The app is configured to look for these variables in the `.env` file.
+
+### Running the Application
 
 To run the application locally, navigate to the top level of your project and run:
 
@@ -71,15 +80,19 @@ To run the application locally, navigate to the top level of your project and ru
 npm run dev
 ```
 
+The browser should open automatically, or you can go directly to: `http://localhost:5173/` or the address provided in the terminal (see below for an example).
+
 ### Things to keep in mind
 
 - The NYT Books API limits the amount of calls you can make: "there are two rate limits per API: 500 requests per day and 5 requests per minute. You should sleep 12 seconds between calls to avoid hitting the per minute rate limit."
-- Ideally this test suite would be more robust, and I hope to add to it in the future.
+- Ideally this test suite would be more robust, and I hope to add to it in the future. I ran into some issues mocking my API requests, and would like to dig into `vitest` to understand it better.
 
 ### The "Why"
 
 **Vite** - I chose Vite for it's quick setup and fast development environment
 
 **React Router DOM** I chose React Router DOM as an accessible way to manage navigation, and it integrates seamlessly with Vite
+
+**Tailwind CSS** I have experience working with Tailwind on prior projects. It is used for responsive design, and minimizes the need for writing all CSS by hand. I like being able to apply styles directly in my components.
 
 **NYT and Google Books API** I love to read - and my favorite book is currently at #1 on the NYT Best Sellers list. I thought this would be a fun way to display a list of books for others to consider.
