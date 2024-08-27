@@ -9,11 +9,4 @@ export default defineConfig({
 			plugins: [tailwindcss()],
 		},
 	},
-	test: {
-		globals: true,
-		environment: 'jsdom',
-	},
-	define: {
-		global: globalThis,
-	},
 });

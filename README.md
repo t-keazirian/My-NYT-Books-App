@@ -18,7 +18,6 @@ This project uses two APIs:
 1. [NYT Books API](https://developer.nytimes.com/docs/books-product/1/overview)
 2. [Google Books API](https://developers.google.com/books)
 
-
 The first page pulls in the list of the current NYT best sellers (see below).
 
 <img width="1202" alt="homepage" src="https://github.com/user-attachments/assets/7132bbc2-82af-45b3-ae99-a743408d0033">
@@ -66,12 +65,16 @@ npm install
 
 ### Executing program
 
-- How to run the program
-- Step-by-step bullets
+To run the application locally, navigate to the top level of your project and run:
 
+```shell
+npm run dev
 ```
-code blocks for commands
-```
+
+### Things to keep in mind
+
+- The NYT Books API limits the amount of calls you can make: "there are two rate limits per API: 500 requests per day and 5 requests per minute. You should sleep 12 seconds between calls to avoid hitting the per minute rate limit."
+- Ideally this test suite would be more robust, and I hope to add to it in the future.
 
 ### The "Why"
 
