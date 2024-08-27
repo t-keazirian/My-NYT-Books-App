@@ -1,4 +1,4 @@
-const toProperCase = title => {
+const toTitleCase = title => {
 	return title
 		.toLowerCase()
 		.split(' ')
@@ -6,4 +6,4 @@ const toProperCase = title => {
 		.join(' ');
 };
 
-export { toProperCase };
+export { toTitleCase };

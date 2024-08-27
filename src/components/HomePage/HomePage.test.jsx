@@ -3,7 +3,7 @@ import HomePage from './HomePage';
 
 describe('HomePage', () => {
 	test('HomePage exists', () => {
-		const appComponent = <HomePage />;
-		expect(appComponent).toBeTruthy;
+		const homePageComponent = <HomePage />;
+		expect(homePageComponent).toBeTruthy;
 	});
 });

@@ -9,7 +9,8 @@ This app allows you to see current NYT Best Sellers and some detailed informatio
 3. [Dependencies](#dependencies)
 4. [Installing](#installing)
 5. [Running the Application](#running-the-application)
-6. [The Why](#the-why)
+6. [Testing](#testing)
+7. [The Why](#the-why)
 
 ## Description
 
@@ -60,7 +61,7 @@ git clone git@github.com:t-keazirian/My-NYT-Books-App.git
 3. Install NPM packages
 
 ```shell
-npm install
+npm i
 ```
 
 4. For the sake of this coding challenge, I have created a `.env.example` file that you can easily copy and then paste my API keys to your convenience
@@ -90,6 +91,14 @@ npm run dev
 
 The browser should open automatically, or you can go directly to: `http://localhost:5173/` or the address provided in the terminal (see below for an example).
 
+### Testing
+
+To run the tests:
+
+```shell
+npm t
+```
+
 ### Things to keep in mind
 
 - The NYT Books API limits the amount of calls you can make: "there are two rate limits per API: 500 requests per day and 5 requests per minute. You should sleep 12 seconds between calls to avoid hitting the per minute rate limit."
@@ -97,10 +106,10 @@ The browser should open automatically, or you can go directly to: `http://localh
 
 ### The "Why"
 
-**Vite** - I chose Vite for it's quick setup and fast development environment
+**Vite** - I chose Vite for it's quick setup and fast development environment.
 
-**React Router DOM** I chose React Router DOM as an accessible way to manage navigation, and it integrates seamlessly with Vite
+**React Router DOM** I chose React Router DOM as an accessible way to manage navigation, and it integrates seamlessly with Vite.
 
 **Tailwind CSS** I have experience working with Tailwind on prior projects. It is used for responsive design, and minimizes the need for writing all CSS by hand. I like being able to apply styles directly in my components.
 
-**NYT and Google Books API** I love to read - and my favorite book is currently at #1 on the NYT Best Sellers list. I thought this would be a fun way to display a list of books for others to consider.
+**NYT and Google Books API** I love to read - and my favorite book is currently at #1 on the NYT Best Sellers list. I thought this would be a fun way to display a list of books for others to consider, and allow the user to dig into each book for more details.

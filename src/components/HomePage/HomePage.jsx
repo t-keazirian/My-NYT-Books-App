@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { newYorkTimesAPIKey } from '../../config';
-import { toProperCase } from '../../helpers/helpers';
+import { toTitleCase } from '../../helpers/helpers';
 import { Link } from 'react-router-dom';
 
 function HomePage() {
@@ -63,7 +63,7 @@ function HomePage() {
 						>
 							<Link
 								to={`/book/${primary_isbn10}`}
-								title={`See details for: ${toProperCase(title)}`}
+								title={`See details for: ${toTitleCase(title)}`}
 							>
 								<img
 									key={primary_isbn10}
@@ -72,13 +72,13 @@ function HomePage() {
 								/>
 								<div>
 									<div className='font-extrabold text-xl text-center text-richBlack'>
-										{toProperCase(title)}
+										{toTitleCase(title)}
 									</div>
 									<div className='font-semibold text-lg text-center px-2 py-1 text-richBlack'>
 										{author}
 									</div>
 									<div className='p-2'>
-										<p className='text-gray-600'>Rank: {rank}</p>
+										<p className='text-gray-600'>Current Rank: {rank}</p>
 										<p className='text-gray-600'>
 											Rank Last Week: {rank_last_week}
 										</p>
