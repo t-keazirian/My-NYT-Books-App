@@ -10,7 +10,8 @@ export default defineConfig({
 		},
 	},
 	test: {
-		environment: 'jsdom', // Ensure jsdom is used
+		globals: true,
+		environment: 'jsdom',
 	},
 	define: {
 		global: globalThis,

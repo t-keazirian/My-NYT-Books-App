@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { googleBooksAPIKey } from '../../constants/constants';
+import { googleBooksAPIKey } from '../../config';
 import { Link, useParams } from 'react-router-dom';
 
 function BookDetail() {

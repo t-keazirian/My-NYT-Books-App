@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { newYorkTimesAPIKey } from '../../constants/constants';
+import { newYorkTimesAPIKey } from '../../config';
 import { toProperCase } from '../../helpers/helpers';
 import { Link } from 'react-router-dom';
 
