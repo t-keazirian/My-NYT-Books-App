@@ -49,7 +49,7 @@ function BookDetail() {
 				</h1>
 			</div>
 			<div className='flex p-6 w-fit justify-center'>
-				<div className='flex flex-col flex-wrap items-center shadow-md shadow-slate-500 rounded-2xl md:w-[50%]'>
+				<div className='flex flex-col flex-wrap items-center shadow-md shadow-slate-500 rounded-2xl md:w-[50%] bg-powderBlue bg-opacity-20 '>
 					<img
 						key={isbn}
 						src={bookDetails.imageLinks.smallThumbnail}
