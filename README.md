@@ -64,9 +64,9 @@ git clone git@github.com:t-keazirian/My-NYT-Books-App.git
 npm i
 ```
 
-4. For the sake of this coding challenge, I have created a `.env.example` file that you can easily copy and then paste my API keys to your convenience
+4. For your convenience, I have created a `.env.example` file that you can easily copy, and then paste my API keys in the file.
 
-5. Copy the `.env.example file
+5. Copy the `.env.example` file
 
 ```shell
 cp .env.example .env
