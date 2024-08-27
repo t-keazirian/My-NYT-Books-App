@@ -126,8 +126,8 @@ npm t
 
 **Vite** - I chose Vite for it's quick setup and fast development environment.
 
-**React Router DOM** I chose React Router DOM as an accessible way to manage navigation, and it integrates seamlessly with Vite.
+**React Router DOM** - I chose React Router DOM as an accessible way to manage navigation, and it integrates seamlessly with Vite.
 
-**Tailwind CSS** I have experience working with Tailwind on prior projects. It is used for responsive design, and minimizes the need for writing all CSS by hand. I like being able to apply styles directly in my components.
+**Tailwind CSS** - I have experience working with Tailwind on prior projects. It is used for responsive design, and minimizes the need for writing all CSS by hand. I like being able to apply styles directly in my components.
 
-**NYT and Google Books API** I love to read - and my favorite book is currently at #1 on the NYT Best Sellers list. I thought this would be a fun way to display a list of books for others to consider, and allow the user to dig into each book for more details.
+**NYT and Google Books API** - I love to read - and my favorite book is currently at #1 on the NYT Best Sellers list. I thought this would be a fun way to display a list of books for others to consider, and allow the user to dig into each book for more details.
