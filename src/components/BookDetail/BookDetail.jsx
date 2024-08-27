@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { googleBooksAPIKey } from '../../constants/constants';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 function BookDetail() {
 	const { isbn } = useParams();
@@ -44,29 +44,37 @@ function BookDetail() {
 	const { title, description, infoLink } = bookDetails;
 
 	return (
-		<div className='flex p-6 w-fit justify-center'>
-			<div className='flex flex-col flex-wrap items-center shadow-md shadow-slate-500 rounded-2xl md:w-[50%]'>
-				<img
-					key={isbn}
-					src={bookDetails.imageLinks.smallThumbnail}
-					className='rounded-xl w-max h-auto object-cover m-2 p-2'
-				/>
-				<a
-					href={infoLink}
-					target='_blank'
-					rel='noopener noreferrer'
-					className='text-powderBlue font-extrabold text-3xl'
-				>
-					{title}
-				</a>
-				<div className='font-semibold text-richBlack'>
-					{bookDetails.authors[0]}
-				</div>
-				<div className='flex flex-col items-center text-center'>
-					<div className='p-8 text-richBlack'>{description}</div>
-				</div>
+		<>
+			<div className='bg-gradient-to-t from-babyPower to-white'>
+				<h1 className='text-richBlack font-extrabold text-4xl text-center bg-gradient-to-br from-sage to-white p-8 font-serif'>
+					📚 NYT Best Seller no. 📚
+				</h1>
 			</div>
-		</div>
+			<div className='flex p-6 w-fit justify-center'>
+				<div className='flex flex-col flex-wrap items-center shadow-md shadow-slate-500 rounded-2xl md:w-[50%]'>
+					<img
+						key={isbn}
+						src={bookDetails.imageLinks.smallThumbnail}
+						className='rounded-xl w-max h-auto object-cover m-2 p-2'
+					/>
+					<a
+						href={infoLink}
+						target='_blank'
+						rel='noopener noreferrer'
+						className='text-indigo font-extrabold text-3xl'
+					>
+						{title}
+					</a>
+					<div className='font-semibold text-richBlack'>
+						{bookDetails.authors[0]}
+					</div>
+					<div className='flex flex-col items-center text-center'>
+						<div className='p-8 text-richBlack'>{description}</div>
+					</div>
+				</div>
+				<Link to={'/'}>go back</Link>
+			</div>
+		</>
 	);
 }
 

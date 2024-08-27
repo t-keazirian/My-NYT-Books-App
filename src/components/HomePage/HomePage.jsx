@@ -35,7 +35,9 @@ function HomePage() {
 
 	if (error) {
 		return (
-			<div className='text-lg text-center bg-white p-6'>Error: {error}</div>
+			<div className='text-lg text-center bg-white p-6 text-red-600'>
+				Error: {error}
+			</div>
 		);
 	}
 
@@ -59,7 +61,10 @@ function HomePage() {
 							key={primary_isbn10}
 							className='m-4 flex flex-col rounded-2xl shadow-md shadow-slate-500 p-2 md:max-w-64 max-w-80 list-none bg-powderBlue bg-opacity-20 transition-shadow duration-300 cursor-pointer hover:shadow-lg hover:shadow-indigo'
 						>
-							<Link to={`/book/${primary_isbn10}`}>
+							<Link
+								to={`/book/${primary_isbn10}`}
+								title={`See details for: ${toProperCase(title)}`}
+							>
 								<img
 									key={primary_isbn10}
 									src={book_image}
