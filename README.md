@@ -91,6 +91,24 @@ npm run dev
 
 The browser should open automatically, or you can go directly to: `http://localhost:5173/` or the address provided in the terminal (see below for an example).
 
+<img width="279" alt="Screenshot 2024-08-27 at 7 18 53 AM" src="https://github.com/user-attachments/assets/ff16a607-ffc7-4f9b-a190-4dd88cfdb1a1">
+
+To [build](https://vitejs.dev/guide/build.html#building-for-production) the application for production:
+
+```shell
+npm run build
+```
+
+You can then preview your production by running this command:
+
+```shell
+npm run preview
+```
+
+Then, you may visit the URL: `http://localhost:4173/` or the address provided in the terminal
+
+Building is not necessary for testing the application at this time, but can be used and customized further in the future.
+
 ### Testing
 
 To run the tests:
