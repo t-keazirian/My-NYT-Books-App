@@ -63,27 +63,34 @@ function HomePage() {
 						>
 							<Link
 								to={`/book/${primary_isbn10}`}
-								title={`See details for: ${toTitleCase(title)}`}
+								title={`See details for: ${
+									title ? toTitleCase(title) : 'your chosen book'
+								}`}
 							>
-								<img
-									key={primary_isbn10}
-									src={book_image}
-									className='rounded-xl w-full h-auto object-cover mb-2 p-2'
-								/>
+								{book_image && (
+									<img
+										key={primary_isbn10}
+										src={book_image}
+										className='rounded-xl w-full h-auto object-cover mb-2 p-2'
+										alt={`Cover of ${title ? toTitleCase(title) : 'the book'}`}
+									/>
+								)}
 								<div>
 									<div className='font-extrabold text-xl text-center text-richBlack'>
-										{toTitleCase(title)}
+										{title ? toTitleCase(title) : 'No title available'}
 									</div>
 									<div className='font-semibold text-lg text-center px-2 py-1 text-richBlack'>
-										{author}
+										{author ? author : 'No author available'}
 									</div>
 									<div className='p-2'>
-										<p className='text-gray-600'>Current Rank: {rank}</p>
 										<p className='text-gray-600'>
-											Rank Last Week: {rank_last_week}
+											Current Rank: {rank ?? 'N/A'}
 										</p>
 										<p className='text-gray-600'>
-											Weeks on List: {weeks_on_list}
+											Rank Last Week: {rank_last_week ?? 'N/A'}
+										</p>
+										<p className='text-gray-600'>
+											Weeks on List: {weeks_on_list ?? 'N/A'}
 										</p>
 									</div>
 								</div>

@@ -5,6 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 function BookDetail() {
 	const { isbn } = useParams();
 	const [bookDetails, setBookDetails] = useState(null);
+	const [error, setError] = useState(null);
 
 	useEffect(() => {
 		if (!isbn) return;
@@ -25,7 +26,7 @@ function BookDetail() {
 					setBookDetails(data.items[0].volumeInfo);
 				}
 			} catch (error) {
-				console.log(error);
+				setError(error.message);
 			}
 		};
 		fetchBookDetails();
@@ -39,7 +40,15 @@ function BookDetail() {
 		);
 	}
 
-	const { title, description, infoLink } = bookDetails;
+	if (error) {
+		return (
+			<div className='text-lg text-center bg-white p-6 text-red-600'>
+				Error: {error}
+			</div>
+		);
+	}
+
+	const { title, description, infoLink, authors = [] } = bookDetails;
 
 	return (
 		<>
@@ -48,26 +57,38 @@ function BookDetail() {
 					📚 More info about {title} 📚
 				</h1>
 			</div>
-			<div className='flex p-6 w-fit justify-center'>
+			<div className='flex p-6 justify-center'>
 				<div className='flex flex-col flex-wrap items-center shadow-md shadow-slate-500 rounded-2xl md:w-[50%] bg-powderBlue bg-opacity-20 '>
-					<img
-						key={isbn}
-						src={bookDetails.imageLinks.smallThumbnail}
-						className='rounded-xl w-max h-auto object-cover m-2 p-2'
-					/>
-					<a
-						href={infoLink}
-						target='_blank'
-						rel='noopener noreferrer'
-						className='text-indigo font-extrabold text-3xl'
-					>
-						{title}
-					</a>
+					{bookDetails.imageLinks.smallThumbnail && (
+						<img
+							key={isbn}
+							src={bookDetails.imageLinks.smallThumbnail}
+							className='rounded-xl w-max h-auto object-cover m-2 p-2'
+						/>
+					)}
+					{infoLink ? (
+						<a
+							href={infoLink}
+							target='_blank'
+							rel='noopener noreferrer'
+							className='text-indigo font-extrabold text-3xl'
+						>
+							{title}
+						</a>
+					) : (
+						<div className='text-indigo font-extrabold text-3xl'>
+							{title ? title : 'No title available'}
+						</div>
+					)}
 					<div className='font-semibold text-richBlack mt-3'>
-						{bookDetails.authors[0]}
+						{authors.length > 0
+							? authors[0]
+							: 'Author information not available'}
 					</div>
 					<div className='flex flex-col items-center text-center'>
-						<div className='p-8 text-richBlack'>{description}</div>
+						<div className='p-8 text-richBlack'>
+							{description ? description : 'No description available'}
+						</div>
 					</div>
 				</div>
 			</div>
